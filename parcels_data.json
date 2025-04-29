@@ -16,7 +16,7 @@
       "20-11-2024": "https://razvan11-cloud.github.io/crop-tiles/LaBatraneZoom/{z}/{x}/{y}.png",
       "20-11-2024-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaBatraneZoomNDVI/{z}/{x}/{y}.png",
       "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Batrane-16-04-2025/{z}/{x}/{y}.png",
-      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/BatraneNDVI -16-04-2025/{z}/{x}/{y}.png"
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/BatraneNDVI-16-04-2025/{z}/{x}/{y}.png"
     },
     "csvAvailable": true,
     "gridBaseUrl": "https://raw.githubusercontent.com/razvan11-cloud/crop-tiles/main/grid/664"
