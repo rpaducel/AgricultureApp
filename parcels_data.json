@@ -74,7 +74,7 @@
     "csvAvailable": false,
     "layers": {
       "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3/{z}/{x}/{y}.png",
-      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3-NDVI/{z}/{x}/{y}.png"
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3NDVI-16-04-2025/{z}/{x}/{y}.png"
     }
   },
   {
