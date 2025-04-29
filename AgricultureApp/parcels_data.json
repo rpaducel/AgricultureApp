@@ -1,0 +1,191 @@
+[
+  {
+    "id": "parcel_c",
+    "kmlId": "c",
+    "name": "-",
+    "location": "Bord",
+    "layers": {},
+    "csvAvailable": false
+  },
+  {
+    "id": "parcel_664",
+    "kmlId": "664",
+    "name": "Batrane",
+    "location": "Deag",
+    "layers": {
+      "20-11-2024": "https://razvan11-cloud.github.io/crop-tiles/LaBatraneZoom/{z}/{x}/{y}.png",
+      "20-11-2024-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaBatraneZoomNDVI/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Batrane-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/BatraneNDVI -16-04-2025/{z}/{x}/{y}.png"
+    },
+    "csvAvailable": true,
+    "gridBaseUrl": "https://raw.githubusercontent.com/razvan11-cloud/crop-tiles/main/grid/664"
+  },
+  {
+    "id": "parcel_672",
+    "kmlId": "672",
+    "name": "Chinchius1",
+    "location": "Deag",
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius1/{z}/{x}/{y}.png"
+    },
+    "csvAvailable": false
+  },
+  {
+    "id": "parcel_102",
+    "kmlId": "102",
+    "name": "Chinchius2",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius2/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius2-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_107",
+    "kmlId": "107",
+    "name": "Foisor",
+    "location": "Deag",
+    "layers": {
+      "20-11-2024": "https://razvan11-cloud.github.io/crop-tiles/Foisor/{z}/{x}/{y}.png",
+      "20-11-2024-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Foisor-NDVI/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Foisor-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/FoisorNDVI-16-04-2025/{z}/{x}/{y}.png"
+    },
+    "csvAvailable": true
+  },
+  {
+    "id": "parcel_42",
+    "kmlId": "42",
+    "name": "Razoare",
+    "location": "Seulia",
+    "layers": {
+      "20-11-2024": "https://razvan11-cloud.github.io/crop-tiles/Razoare/{z}/{x}/{y}.png",
+      "20-11-2024-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Razoare-NDVI/{z}/{x}/{y}.png"
+    },
+    "csvAvailable": true
+  },
+  {
+    "id": "parcel_338",
+    "kmlId": "338",
+    "name": "Chinchius3",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_335",
+    "kmlId": "335",
+    "name": "Chinchius4",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius4/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius4-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_420",
+    "kmlId": "420",
+    "name": "Chinchius5",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius5/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius5-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_136",
+    "kmlId": "136",
+    "name": "Chinchius5",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius6/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius6-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_344",
+    "kmlId": "344",
+    "name": "InFataLaSibian1",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/InFataLaSibian2-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/InFataLaSibian2NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_345",
+    "kmlId": "345",
+    "name": "InFataLaSibian2",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/InFataLaSibian-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/InFataLaSibianNDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_105",
+    "kmlId": "105",
+    "name": "SibianDreapta1",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta3-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta3NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_717",
+    "kmlId": "717",
+    "name": "SibianDreapta2",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta2-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta2NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_81",
+    "kmlId": "81",
+    "name": "SibianStangaDefrisat",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/SibianStangaDefrisat-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/SibianStangaDefrisatNDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_653",
+    "kmlId": "653",
+    "name": "LaNuc1",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc1-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc1NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_654",
+    "kmlId": "654",
+    "name": "LaNuc2",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  }
+  
+]
