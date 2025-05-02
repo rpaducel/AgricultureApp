@@ -191,7 +191,7 @@ function normalizeNDVI(value) {
     // This formula seems specific (127-value)/127 might imply values centered around 127?
     // A more typical normalization might be (value - min) / (max - min) if min/max are known/fixed.
     // Double-check the expected input range and desired output range.
-    return (127 - value) / 127; // Using the original formula provided
+    return (255.0 - value) / 255.0; // Using the original formula provided
 }
 
 /** Disables map scroll wheel zoom (used for layer control hover). */
@@ -735,118 +735,130 @@ function removeGrid() {
  * Uses the grid URL derived from `currentParcel` data or the default pattern.
  * Creates labels showing normalized NDVI and elevation for each grid cell.
  */
+/**
+ * Fetches and displays the GeoJSON grid overlay if the checkbox is checked.
+ * Uses the grid URL derived from `currentParcel` data or the default pattern.
+ * Creates labels showing normalized NDVI and elevation for each grid cell.
+ * **Includes date reformatting to match MM-DD-YYYY filenames.**
+ */
 function displayGridOnCheckbox() {
     removeGrid(); // Always remove the old grid first
 
     // Check prerequisites
     if (!popupCheckbox.checked || !currentParcel || !currentParcel.layers || availableDates.length === 0) {
-        console.log("Grid display skipped: Checkbox off, no parcel, or no dates.");
+        console.log("[GRID] Grid display skipped: Checkbox off, no parcel, or no dates.");
         return;
     }
 
-    // Get current date
+    // Get current date from availableDates (assuming DD-MM-YYYY format)
     let selectedDateIndex = parseInt(timeSlider.value);
     if (isNaN(selectedDateIndex) || selectedDateIndex < 0 || selectedDateIndex >= availableDates.length) {
-        console.warn("Grid display skipped: Invalid date index.");
+        console.warn("[GRID] Grid display skipped: Invalid date index.");
         return;
     }
-    let selectedDate = availableDates[selectedDateIndex]; // Format: DD-MM-YYYY
+    let selectedDate_DDMMYYYY = availableDates[selectedDateIndex]; // Original format: DD-MM-YYYY
+
+    // --- !!! REFORMAT DATE TO MM-DD-YYYY FOR FILENAME !!! ---
+    let dateFormattedForFile = '';
+    try {
+        const parts = selectedDate_DDMMYYYY.split('-'); // Split DD-MM-YYYY
+        if (parts.length === 3) {
+            // Reassemble as MM-DD-YYYY
+            dateFormattedForFile = `${parts[1]}-${parts[0]}-${parts[2]}`; // Swap Day (parts[0]) and Month (parts[1])
+             console.log(`[GRID] Original Date (DD-MM-YYYY)=${selectedDate_DDMMYYYY}, Reformatted for Filename (MM-DD-YYYY)=${dateFormattedForFile}`);
+        } else {
+            console.error("[GRID] Could not parse date for reformatting:", selectedDate_DDMMYYYY);
+            dateFormattedForFile = selectedDate_DDMMYYYY; // Fallback to original if parsing fails
+        }
+    } catch (dateError) {
+         console.error("[GRID] Error reformatting date:", dateError);
+         dateFormattedForFile = selectedDate_DDMMYYYY; // Fallback
+    }
+    // --- !!! END OF REFORMATTING !!! ---
+
 
     // Get parcel identifiers needed for URL
     let parcelKmlId = currentParcel.kmlId;
     let parcelName = currentParcel.name;
     if (!parcelKmlId || !parcelName) {
-         console.warn("Grid display skipped: Missing kmlId or name in current parcel data.");
+         console.warn("[GRID] Grid display skipped: Missing kmlId or name in current parcel data.");
          return;
     }
 
     // Prepare components for the URL
-    let nameForUrl = encodeURIComponent(parcelName.replace(/ /g, '_')); // Replace spaces with underscores, then encode
-    let dateFormatted = selectedDate; // Date is already DD-MM-YYYY
+    let nameForUrl = encodeURIComponent(parcelName.replace(/ /g, '_'));
 
-    // Determine the GeoJSON URL
+    // Determine the GeoJSON URL using the REFORMATTED date
     let geojsonUrl;
     if (currentParcel.gridBaseUrl) {
         // Use specific base URL from JSON if provided
-        geojsonUrl = `${currentParcel.gridBaseUrl}/${nameForUrl}_${dateFormatted}_grid.geojson`;
-         console.log(`Using custom grid base URL from JSON: ${currentParcel.gridBaseUrl}`);
+        geojsonUrl = `${currentParcel.gridBaseUrl}/${nameForUrl}_${dateFormattedForFile}_grid.geojson`; // Use MM-DD-YYYY
+         console.log(`[GRID] Using custom grid base URL from JSON: ${currentParcel.gridBaseUrl}`);
     } else {
         // Use the default pattern
         geojsonUrl = DEFAULT_GRID_URL_PATTERN
             .replace('{kmlId}', parcelKmlId)
             .replace('{name}', nameForUrl)
-            .replace('{date}', dateFormatted);
-         console.log(`Using default grid URL pattern.`);
+            .replace('{date}', dateFormattedForFile); // Use MM-DD-YYYY
+         console.log(`[GRID] Using default grid URL pattern.`);
     }
 
     // Add cache-busting parameter
     geojsonUrl += '?_=' + new Date().getTime();
-    console.log("Attempting to load grid GeoJSON from:", geojsonUrl);
+    console.log("[GRID] Attempting to load grid GeoJSON from:", geojsonUrl); // This URL should now use MM-DD-YYYY format
 
-    // Fetch the GeoJSON data
+    // --- Fetch and process ---
     fetch(geojsonUrl)
         .then(response => {
             if (!response.ok) {
+                // Throw error including the URL that failed
                 throw new Error(`HTTP error! status: ${response.status} fetching grid ${geojsonUrl}`);
             }
             return response.json();
         })
         .then(data => {
-            // --- Check if the parcel context is still valid ---
-            // (User might have clicked another parcel while fetch was in progress)
+            // Check context validity
             if (!map || !currentParcel || currentParcel.kmlId !== parcelKmlId || !popupCheckbox.checked) {
-                console.log("Grid data received, but context changed or checkbox unchecked. Discarding grid.");
-                removeGrid(); // Ensure cleanup if context changed mid-flight
+                console.log("[GRID] Grid data received, but context changed or checkbox unchecked. Discarding grid.");
+                removeGrid();
                 return;
             }
 
-            console.log("Grid GeoJSON loaded successfully. Creating layer...");
+            console.log("[GRID] Grid GeoJSON loaded successfully. Creating layer...");
             ndviGridLayer = L.geoJSON(data, {
-                style: { // Style for the grid cell polygons
-                    fillColor: 'transparent', // No fill, just borders
-                    weight: 0.5,              // Thin border lines
-                    color: '#555',            // Dark grey border color
-                    fillOpacity: 0            // Ensure no fill is visible
+                style: { /* Style */
+                    fillColor: 'transparent', weight: 0.5, color: '#555', fillOpacity: 0
                 },
                 onEachFeature: function(feature, layer) {
-                    // Extract NDVI and Elevation properties (handle potential variations in naming)
-                    const ndviValue = feature.properties?._ndvimean ?? feature.properties?.NDVI_MEAN;
-                    const elevation = feature.properties?.SAMPLE_1 ?? feature.properties?.ELEVATION;
+                    //const ndviValue = feature.properties?._ndvimean ?? feature.properties?.NDVI_MEAN; // Adjust keys if needed
+                    const ndviValue = feature.properties?._NDVImean;
+                    const elevation = feature.properties?._ELEVmean;
+                    //const elevation = feature.properties?.SAMPLE_1 ?? feature.properties?.ELEVATION; // Adjust keys if needed
 
                     if (ndviValue !== undefined && elevation !== undefined && !isNaN(ndviValue) && !isNaN(elevation)) {
                         try {
-                            const normalizedNdvi = normalizeNDVI(parseFloat(ndviValue)); // Normalize the value
+                            const normalizedNdvi = normalizeNDVI(parseFloat(ndviValue));
                             const center = layer.getBounds().getCenter();
-
-                            // Create a custom divIcon for the label
                             const labelIcon = L.divIcon({
-                                className: 'grid-label', // Custom class for CSS styling
+                                className: 'grid-label',
                                 html: `<div>${normalizedNdvi.toFixed(3)}</div><div class="grid-label-elevation">${Number(elevation).toFixed(1)}</div>`,
-                                iconSize: [35, 20], // Adjust size as needed
-                                iconAnchor: [18, 10] // Center the anchor point
+                                iconSize: [35, 20], iconAnchor: [18, 10]
                             });
-
-                            // Create a marker with the divIcon
                             const label = L.marker(center, { icon: labelIcon });
-                            gridLabels.push(label); // Add to array for later removal
+                            gridLabels.push(label);
                         } catch (e) {
-                            console.error("Error processing grid feature properties:", e, feature.properties);
+                            console.error("[GRID] Error processing grid feature properties:", e, feature.properties);
                         }
-                    } else {
-                        // console.warn("Grid feature missing NDVI or Elevation properties:", feature.properties);
                     }
                 }
-            }).addTo(map); // Add the grid polygons to the map
+            }).addTo(map);
 
-            // Add all created labels to the map
             gridLabels.forEach(label => label.addTo(map));
-            console.log(`Displayed grid with ${gridLabels.length} labels.`);
+            console.log(`[GRID] Displayed grid with ${gridLabels.length} labels.`);
 
         }).catch(error => {
-            console.error('Error loading or processing GeoJSON grid:', error);
-            // Don't show an alert, as missing grids might be expected
-            // alert(`Could not load the grid overlay for ${parcelName} on ${selectedDate}. The file might be missing.`);
-            removeGrid(); // Ensure any partial state is cleared
+            console.error('[GRID] Error loading or processing GeoJSON grid:', error); // Log the fetch/parse error
+            removeGrid();
         });
 }
 
