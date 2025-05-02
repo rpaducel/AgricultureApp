@@ -457,27 +457,30 @@ function initializeLayerControl() {
         // Add other base layers here if needed
     };
 
-    // Create Overlay Layers grouped by village/location from JSON data
-    // Use unique locations found in the parcel data as group names
+    // --- MODIFIED SECTION START ---
+    // Create Overlay Layers grouped under a single category
+
+    // Get unique locations from JSON data
     const uniqueLocations = [...new Set(allParcelsData.map(p => p.location).filter(Boolean))].sort();
-    const groupedOverlays = {};
+
+    // Initialize the overlay structure with ONE group
+    const groupedOverlays = {
+        "Locations": {} // Create a single group named "Locations" (or choose another name)
+    };
 
     if (uniqueLocations.length > 0) {
         uniqueLocations.forEach(locName => {
-            // Create a placeholder LayerGroup for each village.
-            // The actual KML features will be added to kmlLayers[locName] later
-            // when the user checks the box in the layer control.
-            // The key here MUST match the village name used in loadKmlLayer and event handlers.
-            groupedOverlays[locName] = {
-                 [locName]: L.layerGroup() // This layer group itself isn't directly used for KML features
-            };
+            // Add each location's placeholder layer under the "Locations" group
+            // The key 'locName' will be the checkbox label
+            // The value is the placeholder layer group
+            groupedOverlays["Locations"][locName] = L.layerGroup();
         });
 
-         console.log(`   Created overlay groups for: ${uniqueLocations.join(', ')}`);
+        console.log(`   Created overlay group "Locations" with entries for: ${uniqueLocations.join(', ')}`);
 
         layerControl = L.control.groupedLayers(baseLayers, groupedOverlays, {
             collapsed: false, // Keep the control expanded initially
-            groupCheckboxes: true, // Allow checking/unchecking whole groups (villages)
+            // groupCheckboxes: true, // This might not be needed with only one group, but doesn't hurt
             position: 'topleft'
         }).addTo(map);
 
@@ -485,13 +488,15 @@ function initializeLayerControl() {
         map.on('overlayadd', handleOverlayAdd);
         map.on('overlayremove', handleOverlayRemove);
 
-         // Add hover effect to disable map scroll zoom over the layer control
+        // Add hover effect to disable map scroll zoom over the layer control
         const container = layerControl.getContainer();
         if (container) {
             container.addEventListener('mouseover', disableMapScrollZoom);
             container.addEventListener('mouseout', enableMapScrollZoom);
         }
-         console.log("   Initialized Grouped Layer Control.");
+        console.log("   Initialized Grouped Layer Control.");
+
+    // --- MODIFIED SECTION END ---
 
     } else {
          console.warn("   No locations found in parcel data. Initializing Layer Control with only base layers.");
