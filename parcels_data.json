@@ -186,6 +186,28 @@
       "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2-16-04-2025/{z}/{x}/{y}.png",
       "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2NDVI-16-04-2025/{z}/{x}/{y}.png"
     }
+  },
+  {
+    "id": "parcel_1",
+    "kmlId": "1",
+    "name": "TauPopoie",
+    "location": "Bord",
+    "csvAvailable": false,
+    "layers": {
+      "30-04-2025": "https://razvan11-cloud.github.io/crop-tiles/TauPopoie-30-04-2025/{z}/{x}/{y}.png",
+      "30-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/TauPopoieNDVI-30-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_731",
+    "kmlId": "731",
+    "name": "Mazaristi",
+    "location": "Bord",
+    "csvAvailable": false,
+    "layers": {
+      "30-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Mazaristi-30-04-2025/{z}/{x}/{y}.png",
+      "30-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/MazaristiNDVI-30-04-2025/{z}/{x}/{y}.png"
+    }
   }
   
 ]
