@@ -191,7 +191,7 @@ function normalizeNDVI(value) {
     // This formula seems specific (127-value)/127 might imply values centered around 127?
     // A more typical normalization might be (value - min) / (max - min) if min/max are known/fixed.
     // Double-check the expected input range and desired output range.
-    return (255.0 - value) / 255.0; // Using the original formula provided
+    return value; // Using the original formula provided
 }
 
 /** Disables map scroll wheel zoom (used for layer control hover). */
