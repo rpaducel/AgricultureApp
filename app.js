@@ -1545,141 +1545,66 @@ async function initializeApp() {
     console.log("Initializing Parcel Viewer Application...");
     console.log("========================================");
 
-    // --- Get references to UI elements EARLY ---
-    // Moved these declarations up!
-    const searchInput = document.getElementById("searchInput");
-    const searchButton = document.getElementById("searchButton");
-    // Declare others if needed, or leave them lower if only used later
-    const timeSlider = document.getElementById("timeSlider");
-    const dateLabel = document.getElementById("dateLabel");
-    const sliderContainer = document.getElementById("slider-container");
-    const playButton = document.getElementById("play-button");
-    const ndviCheckbox = document.getElementById("ndviCheckbox");
-    const ndviValuesDiv = document.getElementById("ndvi-values");
-    const popupCheckbox = document.getElementById("popupCheckbox");
-    // activateSearchBtn, searchBox, closeSearchBtn can be declared lower as
-    // they are only used in the activation block
-
     // --- 1. Load Core Parcel Data (Essential) ---
     const parcelDataLoaded = await loadParcelData();
     if (!parcelDataLoaded) {
+        // Error handling is done within loadParcelData (alert shown)
         console.error("Application initialization failed: Could not load essential parcel data.");
-        return;
+        // Optionally disable UI elements further?
+        return; // Stop initialization
     }
 
     // --- 2. Load Ancillary Data (NDVI Stats - Non-essential) ---
+    // Run concurrently, don't wait for it to finish UI setup
     loadCsvData(() => {
         console.log("NDVI CSV data loading process completed (check logs for success/failure).");
+        // If a parcel is already selected when CSV loads, update its display
         if (currentParcel) {
             updateNdviValuesDisplay();
         }
     });
 
     // --- 3. Initialize Map Components ---
-    initializeLayerControl();
+    // Tile layers are created on demand now, no pre-creation needed here.
+    initializeLayerControl(); // Set up the layer control based on loaded parcel locations
 
     // --- 4. Setup UI Interactions ---
     setupAddParcelForm(); // Initialize the form for managing parcels
 
     // --- 5. Attach Event Listeners for Controls ---
     console.log("Setting up UI Event Listeners...");
+    ndviCheckbox.addEventListener("change", updateTileLayer); // Update layer (which also updates NDVI values)
+    popupCheckbox.addEventListener("change", displayGridOnCheckbox); // Show/hide grid overlay
 
-    // Add null checks for robustness
-    if (ndviCheckbox) {
-        ndviCheckbox.addEventListener("change", updateTileLayer);
-    } else { console.warn("Element ndviCheckbox not found"); }
-
-    if (popupCheckbox) {
-        popupCheckbox.addEventListener("change", displayGridOnCheckbox);
-    } else { console.warn("Element popupCheckbox not found"); }
-
-    if (timeSlider && dateLabel) {
-        timeSlider.addEventListener("input", () => {
-            if (currentParcel && availableDates.length > 0) {
-                const index = parseInt(timeSlider.value);
-                if (index >= 0 && index < availableDates.length) {
-                    dateLabel.textContent = availableDates[index];
-                }
+    // Slider events: 'input' for label update, 'change' for triggering layer load
+    timeSlider.addEventListener("input", () => {
+        if (currentParcel && availableDates.length > 0) {
+            const index = parseInt(timeSlider.value);
+            if (index >= 0 && index < availableDates.length) {
+                dateLabel.textContent = availableDates[index];
             }
-        });
-        timeSlider.addEventListener("change", updateTileLayer);
-    } else { console.warn("Element timeSlider or dateLabel not found"); }
+        }
+    });
+    timeSlider.addEventListener("change", updateTileLayer); // Load new tiles when slider stops moving
 
-    if (playButton) {
-        playButton.addEventListener("click", handlePlayButtonClick);
-    } else { console.warn("Element playButton not found"); }
+    playButton.addEventListener("click", handlePlayButtonClick);
+    searchButton.addEventListener("click", searchLocation);
+    searchInput.addEventListener("keypress", function(e) {
+        if (e.key === 'Enter') {
+            searchLocation(); // Trigger search on Enter key
+        }
+    });
 
-    // Use the searchButton variable declared above
-    if (searchButton) {
-        searchButton.addEventListener("click", searchLocation); // Listener for the main search button
-    } else { console.warn("Element searchButton not found"); }
-
-    // Use the searchInput variable declared above
-    if (searchInput) {
-        searchInput.addEventListener("keypress", function(e) { // <<< THIS LINE IS NOW SAFE
-            if (e.key === 'Enter') {
-                searchLocation(); // Trigger search on Enter key
-            }
-        });
-    } else { console.warn("Element searchInput not found"); }
-
-
-    // --- 6. Setup Search Activation (Mobile Specific) ---
-    console.log("Setting up Search Activation Listeners...");
-    const activateSearchBtn = document.getElementById('activate-search-btn');
-    const searchBox = document.getElementById('search-box');
-    const closeSearchBtn = document.getElementById('close-search-btn');
-    // searchInput is already declared and retrieved above
-
-    if (activateSearchBtn && searchBox && closeSearchBtn && searchInput) {
-        activateSearchBtn.addEventListener('click', () => {
-            console.log("Activate Search clicked");
-            searchBox.classList.add('active');
-            // --- ADD THIS LINE BACK ---
-            activateSearchBtn.style.display = 'none'; // Hide the activate button
-            // --- END OF ADDED LINE ---
-             try {
-                 searchInput.focus();
-             } catch(e) { console.warn("Could not focus search input:", e); }
-        });
-
-        closeSearchBtn.addEventListener('click', () => {
-            console.log("Close Search clicked");
-            searchBox.classList.remove('active');
-            // --- ADD THIS LINE BACK (check if we are still in mobile view) ---
-            if (window.innerWidth <= 768) { // Only show activate button if still mobile
-                 activateSearchBtn.style.display = 'inline-block'; // Show the activate button again
-            }
-            // --- END OF ADDED LINE ---
-        });
-
-         // Attach the *second* listener to the main search button here
-        // for the mobile-specific "close on search" behaviour
-        if (searchButton) { // Check again in case it wasn't found earlier
-            searchButton.addEventListener('click', () => {
-                if (searchBox.classList.contains('active') && window.innerWidth <= 768) {
-                   console.log("Search button clicked on mobile while active, closing search box.");
-                   setTimeout(() => {
-                      if (closeSearchBtn) closeSearchBtn.click();
-                   }, 50);
-                }
-            });
-       }
-
-   } else {
-       // ... (error logging as before) ...
-       console.error("One or more Search activation UI elements not found!");
-   }
-   // --- END of Search Activation Section ---
-
-
-    // --- 7. Set Initial Map State ---
-    clearParcelSelection();
+    // --- 6. Set Initial Map State ---
+    clearParcelSelection(); // Ensure a clean state (no parcel selected initially)
 
     console.log("----------------------------------------");
     console.log("Application Initialized Successfully.");
+    console.log("Select a location from the layer control to view parcels.");
     console.log("----------------------------------------");
 }
 
-// Ensure the rest of your app.js (functions, event listener for DOMContentLoaded) is correct
+// =====================================================================
+// START APPLICATION when the DOM is ready
+// =====================================================================
 document.addEventListener('DOMContentLoaded', initializeApp);

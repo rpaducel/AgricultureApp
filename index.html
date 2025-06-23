@@ -5,69 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplicatie Agricultura</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min.css"> 
+    <link rel="stylesheet" href="style.css"> 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-omnivore/0.3.4/leaflet-omnivore.min.js"></script>
-    <script src="https://unpkg.com/leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min.js"></script>
+    <script src="https://unpkg.com/leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min.js"></script> 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 </head>
 <body>
 
     <div id="map"></div>
-
-    <!-- Slider -->
-    <div id="slider-container" class="ui-panel">
+    <div id="slider-container" class="ui-panel"> 
         <input type="range" id="timeSlider" min="0" max="0" step="1" value="0" />
         <span id="dateLabel"></span>
         <button id="play-button">Play</button>
     </div>
-
-    <!-- Search Box (for Desktop view and activated Mobile view) -->
-    <div id="search-box" class="ui-panel">
+    <div id="search-box" class="ui-panel"> 
         <input type="text" id="searchInput" placeholder="Search by Farm ID, Parcel, Crop Name...">
         <button id="searchButton">Search</button>
-        <!-- **** THIS BUTTON WAS ADDED HERE **** -->
-        <button id="close-search-btn" title="Hide Search Bar">×</button>
-        <!-- **** END OF ADDED BUTTON **** -->
     </div>
-
-     <!-- Activate Search Button (visible only on mobile initially) -->
+     <!-- Add the Activate Button SEPARATELY (will be positioned by CSS) -->
      <button id="activate-search-btn" title="Show Search Bar" class="ui-panel">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
         </svg>
+        <!-- Removed the span text to make it just an icon button -->
+        <!-- <span>Search</span> -->
    </button>
-
-    <!-- NDVI Checkbox -->
     <div id="ndvi-checkbox-container" class="ui-panel">
         <label>
-            NDVI<input type="checkbox" id="ndviCheckbox">
+            NDVI Layer: <input type="checkbox" id="ndviCheckbox">
         </label>
     </div>
-
-    <!-- Grid/Labels Checkbox -->
-    <div id="popup-checkbox-container" class="ui-panel">
+    <div id="popup-checkbox-container" class="ui-panel"> 
         <label>
-            Grid<input type="checkbox" id="popupCheckbox">
+            Show Grid/Labels: <input type="checkbox" id="popupCheckbox"> 
         </label>
     </div>
-
-    <!-- NDVI Values Display -->
-    <div id="ndvi-values" class="ui-panel">
+    <div id="ndvi-values" class="ui-panel"> 
         <b>Mean-NDVI:</b> <span id="mean-value">N/A</span><br>
         <b>Min-NDVI:</b> <span id="min-value">N/A</span><br>
         <b>Max-NDVI:</b> <span id="max-value">N/A</span>
     </div>
-
-    <!-- Hidden Canvas (if needed by libraries) -->
     <canvas id="hiddenCanvas" style="display:none;"></canvas>
 
-    <!-- Manage Parcels Button -->
     <button id="manage-parcels-btn">Manage Parcels</button>
-
-    <!-- Manage Parcels Form Section -->
     <div id="add-parcel-section">
         <button id="close-add-parcel-btn" class="close-btn" title="Close">X</button>
         <h2>Add/Update Parcel</h2>
@@ -85,7 +68,7 @@
                 <label for="newCsvAvailable">CSV Stats Available:</label><br>
                 <input type="checkbox" id="newCsvAvailable" name="newCsvAvailable">
             </div>
-
+            
             <div>
                 <label for="newGridBaseUrl">Custom Grid Base URL (Optional):</label><br>
                 <input type="text" id="newGridBaseUrl" name="newGridBaseUrl" size="40" placeholder="e.g., https://example.com/grids/{kmlId}">
@@ -102,8 +85,6 @@
             <div id="uploadStatus"></div>
         </div>
     </div>
-
-    <!-- Template for Dynamic Layer Inputs -->
     <template id="layer-input-template">
         <div class="layer-input-row">
             <label>Date* (DD-MM-YYYY):</label><br>
@@ -115,8 +96,6 @@
             <button type="button" class="removeLayerDateBtn" title="Remove this date entry">Remove Date</button>
         </div>
     </template>
-
-    <!-- Link to JavaScript -->
     <script src="app.js"></script>
 </body>
 </html>

@@ -8,6 +8,28 @@
     "csvAvailable": false
   },
   {
+    "id": "parcel_731",
+    "kmlId": "731",
+    "name": "Mazaristi",
+    "location": "Bord",
+    "csvAvailable": false,
+    "layers": {
+      "30-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Mazaristi-30-04-2025/{z}/{x}/{y}.png",
+      "30-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/MazaristiNDVI-30-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_1",
+    "kmlId": "1",
+    "name": "TauPopoie",
+    "location": "Bord",
+    "csvAvailable": false,
+    "layers": {
+      "30-04-2025": "https://razvan11-cloud.github.io/crop-tiles/TauPopoie-30-04-2025/{z}/{x}/{y}.png",
+      "30-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/TauPopoieNDVI-30-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
     "id": "parcel_664",
     "kmlId": "664",
     "name": "Batrane",
@@ -26,11 +48,13 @@
     "kmlId": "672",
     "name": "Chinchius1",
     "location": "Deag",
+    "csvAvailable": false,
     "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius1-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius2-NDVI-19-06-2025/{z}/{x}/{y}.png",
       "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius1/{z}/{x}/{y}.png",
       "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius1NDVI-16-04-2025/{z}/{x}/{y}.png"
-    },
-    "csvAvailable": false
+    }
   },
   {
     "id": "parcel_102",
@@ -39,8 +63,61 @@
     "location": "Deag",
     "csvAvailable": false,
     "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius2-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius2-NDVI-19-06-2025/{z}/{x}/{y}.png",
       "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius2/{z}/{x}/{y}.png",
       "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius2-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_338",
+    "kmlId": "338",
+    "name": "Chinchius3",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_335",
+    "kmlId": "335",
+    "name": "Chinchius4",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius4-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius4-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius4/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius4-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_420",
+    "kmlId": "420",
+    "name": "Chinchius5",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius5-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius5/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius5-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_136",
+    "kmlId": "136",
+    "name": "Chinchius5",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius6-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius6-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius6/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius6-NDVI/{z}/{x}/{y}.png"
     }
   },
   {
@@ -55,61 +132,6 @@
       "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/FoisorNDVI-16-04-2025/{z}/{x}/{y}.png"
     },
     "csvAvailable": true
-  },
-  {
-    "id": "parcel_42",
-    "kmlId": "42",
-    "name": "Razoare",
-    "location": "Seulia",
-    "layers": {
-      "20-11-2024": "https://razvan11-cloud.github.io/crop-tiles/Razoare/{z}/{x}/{y}.png",
-      "20-11-2024-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Razoare-NDVI/{z}/{x}/{y}.png"
-    },
-    "csvAvailable": true
-  },
-  {
-    "id": "parcel_338",
-    "kmlId": "338",
-    "name": "Chinchius3",
-    "location": "Deag",
-    "csvAvailable": false,
-    "layers": {
-      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3/{z}/{x}/{y}.png",
-      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3NDVI-16-04-2025/{z}/{x}/{y}.png"
-    }
-  },
-  {
-    "id": "parcel_335",
-    "kmlId": "335",
-    "name": "Chinchius4",
-    "location": "Deag",
-    "csvAvailable": false,
-    "layers": {
-      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius4/{z}/{x}/{y}.png",
-      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius4-NDVI/{z}/{x}/{y}.png"
-    }
-  },
-  {
-    "id": "parcel_420",
-    "kmlId": "420",
-    "name": "Chinchius5",
-    "location": "Deag",
-    "csvAvailable": false,
-    "layers": {
-      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius5/{z}/{x}/{y}.png",
-      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius5-NDVI/{z}/{x}/{y}.png"
-    }
-  },
-  {
-    "id": "parcel_136",
-    "kmlId": "136",
-    "name": "Chinchius5",
-    "location": "Deag",
-    "csvAvailable": false,
-    "layers": {
-      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius6/{z}/{x}/{y}.png",
-      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius6-NDVI/{z}/{x}/{y}.png"
-    }
   },
   {
     "id": "parcel_344",
@@ -134,12 +156,40 @@
     }
   },
   {
+    "id": "parcel_653",
+    "kmlId": "653",
+    "name": "LaNuc1",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc1-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc1-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc1-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc1NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_654",
+    "kmlId": "654",
+    "name": "LaNuc2",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2NDVI-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
     "id": "parcel_105",
     "kmlId": "105",
     "name": "SibianDreapta1",
     "location": "Deag",
     "csvAvailable": false,
     "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta3-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta3-NDVI-19-06-2025/{z}/{x}/{y}.png",
       "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta3-16-04-2025/{z}/{x}/{y}.png",
       "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta3NDVI-16-04-2025/{z}/{x}/{y}.png"
     }
@@ -156,6 +206,14 @@
     }
   },
   {
+    "id": "parcel_104",
+    "kmlId": "104",
+    "name": "SibianDreapta3",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {}
+  },
+  {
     "id": "parcel_81",
     "kmlId": "81",
     "name": "SibianStangaDefrisat",
@@ -167,48 +225,14 @@
     }
   },
   {
-    "id": "parcel_653",
-    "kmlId": "653",
-    "name": "LaNuc1",
-    "location": "Deag",
-    "csvAvailable": false,
+    "id": "parcel_42",
+    "kmlId": "42",
+    "name": "Razoare",
+    "location": "Seulia",
     "layers": {
-      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc1-16-04-2025/{z}/{x}/{y}.png",
-      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc1NDVI-16-04-2025/{z}/{x}/{y}.png"
-    }
-  },
-  {
-    "id": "parcel_654",
-    "kmlId": "654",
-    "name": "LaNuc2",
-    "location": "Deag",
-    "csvAvailable": false,
-    "layers": {
-      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2-16-04-2025/{z}/{x}/{y}.png",
-      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2NDVI-16-04-2025/{z}/{x}/{y}.png"
-    }
-  },
-  {
-    "id": "parcel_1",
-    "kmlId": "1",
-    "name": "TauPopoie",
-    "location": "Bord",
-    "csvAvailable": false,
-    "layers": {
-      "30-04-2025": "https://razvan11-cloud.github.io/crop-tiles/TauPopoie-30-04-2025/{z}/{x}/{y}.png",
-      "30-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/TauPopoieNDVI-30-04-2025/{z}/{x}/{y}.png"
-    }
-  },
-  {
-    "id": "parcel_731",
-    "kmlId": "731",
-    "name": "Mazaristi",
-    "location": "Bord",
-    "csvAvailable": false,
-    "layers": {
-      "30-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Mazaristi-30-04-2025/{z}/{x}/{y}.png",
-      "30-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/MazaristiNDVI-30-04-2025/{z}/{x}/{y}.png"
-    }
+      "20-11-2024": "https://razvan11-cloud.github.io/crop-tiles/Razoare/{z}/{x}/{y}.png",
+      "20-11-2024-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Razoare-NDVI/{z}/{x}/{y}.png"
+    },
+    "csvAvailable": true
   }
-  
 ]
