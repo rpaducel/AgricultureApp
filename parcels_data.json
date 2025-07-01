@@ -14,7 +14,7 @@
     "location": "Bord",
     "csvAvailable": false,
     "layers": {
-      "20-06-2025": "https://razvan11-cloud.github.io/crop-tiles/MazaristiJos-RGB-19-06-2025{z}/{x}/{y}.png",
+      "20-06-2025": "https://razvan11-cloud.github.io/crop-tiles/MazaristiJos-RGB-19-06-2025/{z}/{x}/{y}.png",
       "20-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/MazaristiJos-NDVI-19-06-2025/{z}/{x}/{y}.png",
       "30-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Mazaristi-30-04-2025/{z}/{x}/{y}.png",
       "30-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/MazaristiNDVI-30-04-2025/{z}/{x}/{y}.png"
