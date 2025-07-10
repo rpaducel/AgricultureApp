@@ -1,0 +1,509 @@
+[
+  {
+    "id": "parcel_c",
+    "kmlId": "c",
+    "name": "-",
+    "location": "Bord",
+    "layers": {},
+    "csvAvailable": false
+  },
+  {
+    "id": "parcel_101",
+    "kmlId": "101",
+    "name": "IntreCaiSus",
+    "location": "Bord",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Intrecaisus-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Intrecaisus-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_999",
+    "kmlId": "999",
+    "name": "IntreCaiSusMijloc",
+    "location": "Bord",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Intrecaisusmijloc-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Intrecaisusmijloc-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_99",
+    "kmlId": "99",
+    "name": "IntreParaie",
+    "location": "Bord",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Intreparaiesoia-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Intreparaiesoia-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_731",
+    "kmlId": "731",
+    "name": "Mazaristi",
+    "location": "Bord",
+    "csvAvailable": false,
+    "layers": {
+      "20-06-2025": "https://razvan11-cloud.github.io/crop-tiles/MazaristiJos-RGB-19-06-2025{z}/{x}/{y}.png",
+      "20-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/MazaristiJos-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "30-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Mazaristi-30-04-2025/{z}/{x}/{y}.png",
+      "30-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/MazaristiNDVI-30-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_292",
+    "kmlId": "292",
+    "name": "Mazaristi sus",
+    "location": "Bord",
+    "csvAvailable": false,
+    "layers": {}
+  },
+  {
+    "id": "parcel_1",
+    "kmlId": "1",
+    "name": "TauPopoie",
+    "location": "Bord",
+    "csvAvailable": false,
+    "layers": {
+      "20-06-2025": "https://razvan11-cloud.github.io/crop-tiles/TauPopoie-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "20-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/TauPopoie-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "30-04-2025": "https://razvan11-cloud.github.io/crop-tiles/TauPopoie-30-04-2025/{z}/{x}/{y}.png",
+      "30-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/TauPopoieNDVI-30-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_664",
+    "kmlId": "664",
+    "name": "Batrane",
+    "location": "Deag",
+    "csvAvailable": true,
+    "gridBaseUrl": "https://raw.githubusercontent.com/razvan11-cloud/crop-tiles/main/grid/664",
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Batrane-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Batrane-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "20-11-2024": "https://razvan11-cloud.github.io/crop-tiles/LaBatraneZoom/{z}/{x}/{y}.png",
+      "20-11-2024-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaBatraneZoomNDVI/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Batrane-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/BatraneNDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_672",
+    "kmlId": "672",
+    "name": "Chinchius1",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius1-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius2-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius1/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius1NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_102",
+    "kmlId": "102",
+    "name": "Chinchius2",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius2-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius2-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius2/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius2-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_338",
+    "kmlId": "338",
+    "name": "Chinchius3",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius3NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_335",
+    "kmlId": "335",
+    "name": "Chinchius4",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius4-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius4-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius4/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius4-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_420",
+    "kmlId": "420",
+    "name": "Chinchius5",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius5-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius5/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius5-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_136",
+    "kmlId": "136",
+    "name": "Chinchius5",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius6-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius6-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Chinchius6/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Chinchius6-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_107",
+    "kmlId": "107",
+    "name": "Foisor",
+    "location": "Deag",
+    "csvAvailable": true,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Foisor-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Foisor-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "20-11-2024": "https://razvan11-cloud.github.io/crop-tiles/Foisor/{z}/{x}/{y}.png",
+      "20-11-2024-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Foisor-NDVI/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/Foisor-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/FoisorNDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_278",
+    "kmlId": "278",
+    "name": "Hagau01",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Hagau01soia-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Hagau01soia-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_332",
+    "kmlId": "332",
+    "name": "Hagau02",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Hagau02soia-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Hagau02soia-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_120",
+    "kmlId": "120",
+    "name": "Hagau03",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Hagau03soia-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Hagau03soia-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_344",
+    "kmlId": "344",
+    "name": "InFataLaSibian1",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/InFataLaSibian2-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/InFataLaSibian2NDVI-16-04-2025/{z}/{x}/{y}.png",
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/InFatalaSibian2-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/InFatalaSibian2-NDVI-19-06-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_345",
+    "kmlId": "345",
+    "name": "InFataLaSibian2",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/InFataLaSibian-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/InFataLaSibianNDVI-16-04-2025/{z}/{x}/{y}.png",
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/InFatalaSibian1-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/InFatalaSibian1-NDVI-19-06-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_653",
+    "kmlId": "653",
+    "name": "LaNuc1",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc1-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc1-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc1-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc1NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_654",
+    "kmlId": "654",
+    "name": "LaNuc2",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2NDVI-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/LaNuc2NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_105",
+    "kmlId": "105",
+    "name": "SibianDreapta1",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta3-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta3-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta3-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta3NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_717",
+    "kmlId": "717",
+    "name": "SibianDreapta2",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta2-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta2-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta2-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta2NDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_104",
+    "kmlId": "104",
+    "name": "SibianDreapta3",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta362ha-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/SibianDreapta362ha-NDVI-19-06-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_81",
+    "kmlId": "81",
+    "name": "SibianStangaDefrisat",
+    "location": "Deag",
+    "csvAvailable": false,
+    "layers": {
+      "19-06-2025": "https://razvan11-cloud.github.io/crop-tiles/SibianStangaDefrisat-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "19-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/SibianStangaDefrisat-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "16-04-2025": "https://razvan11-cloud.github.io/crop-tiles/SibianStangaDefrisat-16-04-2025/{z}/{x}/{y}.png",
+      "16-04-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/SibianStangaDefrisatNDVI-16-04-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_98",
+    "kmlId": "98",
+    "name": "Cocean Sfecla",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Coceansfecla-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Coceansfecla-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_552",
+    "kmlId": "552",
+    "name": "DupaPadure",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Dupapaduresfecla-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Dupapaduresfecla-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_251",
+    "kmlId": "251",
+    "name": "In Groapa",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "20-06-2025": "https://razvan11-cloud.github.io/crop-tiles/InGroapa-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "20-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/InGroapa-NDVI-19-06-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_320",
+    "kmlId": "320",
+    "name": "InFataJos",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Infatajossoia-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Infatajossoia-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_64",
+    "kmlId": "646",
+    "name": "InFataSus01",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Infatasus02soia-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Infatasus02soia-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_38",
+    "kmlId": "38",
+    "name": "InFataSus02",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Infatasus01soia-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Infatasus01soia-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_2",
+    "kmlId": "2",
+    "name": "La sosea01",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Lasosea01sfecla-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Lasosea01sfecla-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_62",
+    "kmlId": "62",
+    "name": "La sosea02",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Lasosea02sfecla-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Lasosea02sfecla-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_234",
+    "kmlId": "234",
+    "name": "LaReleu",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Lareleusfecla-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Lareleusfecla-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_249",
+    "kmlId": "249",
+    "name": "Nucul lui Platon",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "20-06-2025": "https://razvan11-cloud.github.io/crop-tiles/NuculLuiPlaton-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "20-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/NuculLuiPlaton-NDVI-19-06-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_240",
+    "kmlId": "240",
+    "name": "Pepeniste",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "20-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Pepeniste-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "20-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Pepeniste-NDVI-19-06-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_42",
+    "kmlId": "42",
+    "name": "Razoare",
+    "location": "Seulia",
+    "csvAvailable": true,
+    "layers": {
+      "20-06-2025": "https://razvan11-cloud.github.io/crop-tiles/Razoare-RGB-19-06-2025/{z}/{x}/{y}.png",
+      "20-06-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Razoare-NDVI-19-06-2025/{z}/{x}/{y}.png",
+      "20-11-2024": "https://razvan11-cloud.github.io/crop-tiles/Razoare/{z}/{x}/{y}.png",
+      "20-11-2024-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Razoare-NDVI/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_45",
+    "kmlId": "45",
+    "name": "Tausor01",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Tausor01sfecla-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Tausor01sfecla-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_131",
+    "kmlId": "131",
+    "name": "Tausor02",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Tausor02sfecla-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Tausor02sfecla-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_52",
+    "kmlId": "52",
+    "name": "Tausor03",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Tausor03sfecla1-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Tausor03sfecla1-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_53",
+    "kmlId": "53",
+    "name": "Tausor04",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/Tausor03sfecla2-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/Tausor03sfecla2-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "id": "parcel_27",
+    "kmlId": "27",
+    "name": "Continit",
+    "location": "Seulia",
+    "csvAvailable": false,
+    "layers": {
+      "04-07-2025": "https://razvan11-cloud.github.io/crop-tiles/ContinitSolaMare-RGB-04-07-2025/{z}/{x}/{y}.png",
+      "04-07-2025-NDVI": "https://razvan11-cloud.github.io/crop-tiles/ContinitSolaMare-NDVI-04-07-2025/{z}/{x}/{y}.png"
+    }
+  }
+]
